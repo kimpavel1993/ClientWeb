@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 1</title>
+</head>
+<body>
+<!--suppress HtmlUnknownTarget -->
+<form action="test.php" id="myForm" method="post">
+    <label>Введите логин</label>
+    <label>
+        <input name="clientName" placeholder="Логин" type="text">
+    </label>
+
+    <label>Введите пароль</label>
+    <label>
+        <input name="password" placeholder="Пароль" type="password">
+    </label>
+
+    <button type="submit">Войти</button>
+    <br/>
+
+    <label>
+        <textarea rows="10" cols="45" name="textArea">Введите текст</textarea>
+    </label>
+    <br/>
+
+    <label>
+        <textarea rows="45" cols="10" name="textArea">Введите текст</textarea>
+    </label>
+    <br/>
+
+    <label>
+        Вы женаты?
+        <input type="checkbox">
+    </label>
+
+    <label for="isChild">Есть дети?</label>
+    <input type="checkbox" id="isChild">
+
+    <p>
+        <label>Пол:</label>
+        <label>
+            Мужской
+            <input name="gender" value="male" type="radio">
+        </label>
+        <label>
+            Женский
+            <input name="gender" value="female" type="radio">
+        </label>
+    </p>
+
+    <p>
+        <label> Есть гражданство?
+            <select>
+                <option value="yes" selected="selected">Да</option>
+                <option value="no">Нет</option>
+            </select>
+        </label>
+    </p>
+
+    <p>
+        <label>Выберите любимого персонажа:
+            <select multiple="multiple">
+                <option value="harry">Гарри Поттер</option>
+                <option value="ron">Рон Уизли</option>
+                <option value="hermione">Гермиона Грейнджер</option>
+            </select></label>
+    </p>
+</form>
+
+<a href="page2.html">Ссылка на страницу 2</a>
+</body>
+</html>
