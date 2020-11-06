@@ -11,7 +11,7 @@
     margin: 0 auto;
 }
 
-th, td {
+.table-style th, td {
     text-indent: 10px;
     position: relative;
     border: 1px solid #CCCCCC;;
@@ -20,13 +20,13 @@ th, td {
     height: 47px;
 }
 
-th {
+.table-style th {
     background-color: #3498DB;
     color: white;
     height: 46px;
 }
 
-tr:nth-child(odd) {
+.table-style tr:nth-child(odd) {
     background-color: #EEEEEE;
 }
 
