@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.table-style > table {
+    border: 1px solid #CCCCCC;
+    text-align: left;
+    font-family: "Gill Sans MT", Georgia, sans-serif;
+    font-size: 18px;
+    position: relative;
+    margin: 0 auto;
+}
+
+th, td {
+    text-indent: 10px;
+    position: relative;
+    border: 1px solid #CCCCCC;;
+    font-weight: normal;
+    vertical-align: middle;
+    height: 47px;
+}
+
+th {
+    background-color: #3498DB;
+    color: white;
+    height: 46px;
+}
+
+tr:nth-child(odd) {
+    background-color: #EEEEEE;
+}
+
+.first-width {
+    width: 160px;
+}
+
+.second-width {
+    width: 280px;
+}
+
+.third-width {
+    width: 180px;
+}
