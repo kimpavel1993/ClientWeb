@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+.text-style {
+    font-family: "Arial Narrow", Georgia, sans-serif;
+    font-weight: normal;
+    color: #676565;
+}
+
+.text-style h1 {
+    position: relative;
+    margin-left: 21px;
+    margin-bottom: 6px;
+    font-size: 26pt;
+    font-weight: normal;
+    font-family: "Arial", Georgia, sans-serif;
+}
+
+.form-style {
+    width: 845px;
+    height: 532px;
+    background-color: #FEEED6;
+}
+
+.form-style p {
+    position: relative;
+    top: 20px;
+    margin-left: 21px;
+    margin-bottom: 29px;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+input[type="text"] {
+    position: relative;
+    margin-left: 20px;
+    width: 802px;
+    height: 40px;
+    padding-left: 12px;
+    font-size: 12pt;
+    font-family: "Arial Narrow", Georgia, sans-serif;
+}
+
+textarea[name="comment"] {
+    position: relative;
+    margin-left: 20px;
+    width: 802px;
+    height: 129px;
+    padding-left: 12px;
+    font-size: 12pt;
+    font-family: "Arial Narrow", Georgia, sans-serif;
+}
+
+.form-style p.form-indication {
+    position: relative;
+    margin-top: -3px;
+    font-weight: normal;
+}
+
+.form-style button {
+    position: relative;
+    float: right;
+    margin-right: 24px;
+    margin-top: 6px;
+    height: 37px;
+    width: 171px;
+    background-color: #378DB2;
+    color: #FFFFFF;
+    border: 0;
+    font-size: 12pt;
+    font-weight: bolder;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+::-moz-placeholder {
+    color: #999999;
+}
+:-ms-input-placeholder {
+    color: #999999;
+}
