@@ -27,7 +27,7 @@
     // noinspection ES6ConvertVarToLetConst
     var sumEvenNumbers = evenNumbersArray1.reduce(function (e1, e2) {
         return e1 + e2;
-    })
+    }, 0)
 
     console.log("Сумма четных чисел массива: ", sumEvenNumbers)
 
