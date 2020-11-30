@@ -35,7 +35,7 @@
     var array2 = [];
 
     // noinspection ES6ConvertVarToLetConst
-    for (var i = 1; i < 101; i++) {
+    for (var i = 1; i <= 100; i++) {
         array2.push(i);
     }
 
