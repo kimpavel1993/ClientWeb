@@ -1,6 +1,6 @@
 "use strict";
 
-(function f() {
+(function () {
     // noinspection ES6ConvertVarToLetConst
     var array1 = [1, 3, 7, 43, -31, 5, 312, 82, 10, 123, 121];
     console.log("Массив:", array1);
