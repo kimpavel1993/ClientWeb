@@ -61,7 +61,7 @@
         // noinspection ES6ConvertVarToLetConst
         var maxCitiesCount = 0;
         // noinspection ES6ConvertVarToLetConst
-        var maxCitiesCountry = countries.filter(function (e) {
+        var maxCitiesCountry = Object.create(countries).filter(function (e) {
                 if (e.city.length > maxCitiesCount) {
                     maxCitiesCount = e.city.length;
                 }
@@ -73,28 +73,36 @@
         console.log("Страны, с максимальным количеством городов", maxCitiesCountry);
 
         // noinspection ES6ConvertVarToLetConst
-        var myCountries = new Map();
-
-        // noinspection ES6ConvertVarToLetConst
-        var russiaPopulation = russia.city.reduce(function (sum, e) {
+        var russiaPopulation = Object.create(russia.city).reduce(function (sum, e) {
             return sum + e.population;
         }, 0);
 
         // noinspection ES6ConvertVarToLetConst
-        var japanPopulation = japan.city.reduce(function (sum, e) {
+        var japanPopulation = Object.create(japan.city).reduce(function (sum, e) {
             return sum + e.population;
         }, 0);
 
         // noinspection ES6ConvertVarToLetConst
-        var francePopulation = france.city.reduce(function (sum, e) {
+        var francePopulation = Object.create(france.city).reduce(function (sum, e) {
             return sum + e.population;
         }, 0);
 
-        myCountries.set(russia, russiaPopulation);
-        myCountries.set(japan, japanPopulation);
-        myCountries.set(france, francePopulation);
+        // noinspection ES6ConvertVarToLetConst
+        var sumPopulations = [russiaPopulation, japanPopulation, francePopulation];
 
-        console.log(myCountries);
+        // noinspection ES6ConvertVarToLetConst
+        var myCountries = countries.map(function (e) {
+            return e.name
+        });
+
+        // noinspection ES6ConvertVarToLetConst
+        var result = Object.create(myCountries).reduce(function (e, value, i ) {
+            e[value] = sumPopulations[i];
+
+            return e;
+        }, {})
+
+        console.log(result);
     }
 )
 ()
