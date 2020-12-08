@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевод температур</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div>
+    <label for="celsius-text-field">Температура в градусах Цельсиях:</label>
+    <input type="text" id="celsius-text-field" placeholder="Введите температуру"/>
+
+    <button id="convert-button" type="button">Конвертировать</button>
+
+    <p id="kelvin-message-result"></p>
+    <p id="fahrenheit-message-result"></p>
+
+    <div class="error" id="error-message"></div>
+</div>
+</body>
+</html>
