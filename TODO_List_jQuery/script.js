@@ -7,7 +7,7 @@ $(document).ready(function () {
     var errorMessage = $("#error-message");
 
 
-    $("#button").click(function () {
+    $("#add-button").click(function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.val();
 
@@ -22,7 +22,6 @@ $(document).ready(function () {
         var listItem = $("<li>");
 
         function setViewMode() {
-
             listItem.html("<span class='text'></span><button class='edit-button' type='button'>Редактировать</button><button class='delete-button' type='button'>Удалить</button>");
 
             listItem.find(".edit-button").click(function () {
