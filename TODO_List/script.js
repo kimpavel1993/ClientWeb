@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.querySelector(".edit-text").value = text;
 
                 listItem.querySelector(".save-button").addEventListener("click", function () {
-                    text = listItem.querySelector(".edit-text").value
+                    text = listItem.querySelector(".edit-text").value;
 
                     setViewMode();
                 });
