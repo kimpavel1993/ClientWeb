@@ -7,7 +7,7 @@ $(document).ready(function () {
     var errorMessage = $("#error-message");
 
 
-    $(document).click(function () {
+    $("#button").click(function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.val();
 
