@@ -26,27 +26,27 @@ $(document).ready(function () {
         if (secondNameText === "" || firstNameText === "" || phoneNameText === "") {
 
             if (secondNameText === "") {
-                secondNameErrorMessage.text("Заполните поле Фамилия")
-                    secondNameTextField.css({backgroundColor: "red"})
+                secondNameErrorMessage.text("Заполните поле Фамилия");
+                secondNameTextField.css({backgroundColor: "red"});
             } else {
                 secondNameErrorMessage.text("");
-                secondNameTextField.css({backgroundColor: "white"})
+                secondNameTextField.css({backgroundColor: "white"});
             }
 
             if (firstNameText === "") {
-                firstNameErrorMessage.text("Заполните поле Имя")
-                firstNameTextField.css({backgroundColor: "red"})
+                firstNameErrorMessage.text("Заполните поле Имя");
+                firstNameTextField.css({backgroundColor: "red"});
             } else {
                 firstNameErrorMessage.text("");
-                firstNameTextField.css({backgroundColor: "white"})
+                firstNameTextField.css({backgroundColor: "white"});
             }
 
             if (phoneNameText === "") {
-                phoneErrorMessage.text("Заполните поле Номер телефона")
-                phoneTextField.css({backgroundColor: "red"})
+                phoneErrorMessage.text("Заполните поле Номер телефона");
+                phoneTextField.css({backgroundColor: "red"});
             } else {
                 phoneErrorMessage.text("");
-                phoneTextField.css({backgroundColor: "white"})
+                phoneTextField.css({backgroundColor: "white"});
             }
 
             return;
@@ -56,12 +56,12 @@ $(document).ready(function () {
         firstNameErrorMessage.text("");
         phoneErrorMessage.text("");
 
-        secondNameTextField.css({backgroundColor: "white"})
-        firstNameTextField.css({backgroundColor: "white"})
-        phoneTextField.css({backgroundColor: "white"})
+        secondNameTextField.css({backgroundColor: "white"});
+        firstNameTextField.css({backgroundColor: "white"});
+        phoneTextField.css({backgroundColor: "white"});
 
         // noinspection ES6ConvertVarToLetConst
-        var tableItem = $("<tbody><tr></tr></tbody>")
+        var tableItem = $("<tbody><tr></tr></tbody>");
 
         tableItem.html("<td><span class = 'index'></span></td><td><span class = 'second-name'></span></td><td><span class = 'first-name'></span></td><td><span class = 'phone'></span></td><td><button class ='delete-button'>X</button></td>");
 
