@@ -24,7 +24,6 @@ $(document).ready(function () {
         // noinspection ES6ConvertVarToLetConst
 
         if (secondNameText === "" || firstNameText === "" || phoneNameText === "") {
-
             if (secondNameText === "") {
                 secondNameErrorMessage.text("Заполните поле Фамилия");
                 secondNameTextField.css({backgroundColor: "red"});
