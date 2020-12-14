@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.table-contacts th, td{
+    text-indent: 10px;
+    position: relative;
+    border: 1px solid #CCCCCC;;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.table-contacts th {
+    background-color: #3498DB;
+    color: white;
+    height: 46px;
+}
+
+.table-contacts td{
+    background-color: #EEEEEE;
+}

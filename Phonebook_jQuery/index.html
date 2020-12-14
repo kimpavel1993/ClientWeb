@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhoneBook jQuery</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="libs/jquery-3.5.1.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p>Фамилия</p>
+
+<div>
+    <label for="text-field-second-name"></label>
+    <input type="text" id="text-field-second-name"/>
+</div>
+
+<p>Имя</p>
+
+<div>
+    <label for="text-field-first-name"></label>
+    <input type="text" id="text-field-first-name"/>
+</div>
+
+<p>Номер телефона</p>
+
+<div>
+    <label for="text-field-phone"></label>
+    <input type="text" id="text-field-phone"/>
+</div>
+
+<button type="button" id="add-button">Добавить в таблицу</button>
+
+<div class="error" id="error-message-second-name"></div>
+<div class="error" id="error-message-first-name"></div>
+<div class="error" id="error-message-phone"></div>
+
+<table class="table-contacts" id="table">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Номер телефона</th>
+        <th></th>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>
