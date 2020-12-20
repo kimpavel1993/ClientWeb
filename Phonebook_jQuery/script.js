@@ -60,22 +60,23 @@ $(document).ready(function () {
         phoneTextField.css({backgroundColor: "white"});
 
         // noinspection ES6ConvertVarToLetConst
-        var tableItem = $("<tbody><tr></tr></tbody>");
+        var tableItem = $("<tbody></tbody>");
 
-        tableItem.html("<td><span class = 'index'></span></td><td><span class = 'second-name'></span></td><td><span class = 'first-name'></span></td><td><span class = 'phone'></span></td><td><button class ='delete-button'>X</button></td>");
+        tableItem.html("<tr><td><span class = 'index'></span></td><td><span class = 'second-name'></span></td><td><span class = 'first-name'></span></td><td><span class = 'phone'></span></td><td><button class ='delete-button'>X</button></td></tr>");
 
         tableItem.find(".second-name").text(secondNameText);
         tableItem.find(".first-name").text(firstNameText);
         tableItem.find(".phone").text(phoneNameText);
-        tableItem.each(function (i) {
-            $(this).find(".index").text(i + 1);
-        });
 
         tableItem.find(".delete-button").click(function () {
             tableItem.remove();
         });
 
         table.append(tableItem);
+
+        table.find("tr").each(function (i) {
+            $(this).find(".index").text(i);
+        });
 
         secondNameTextField.val("");
         firstNameTextField.val("");
