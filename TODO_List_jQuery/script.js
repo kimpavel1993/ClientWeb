@@ -5,8 +5,7 @@ $(document).ready(function () {
     var list = $("#list");
     // noinspection ES6ConvertVarToLetConst
     var errorMessage = $("#error-message");
-
-
+    
     $("#add-button").click(function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.val();
