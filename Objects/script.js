@@ -76,19 +76,21 @@
 
     console.log("Страны, с максимальным количеством городов", maxCitiesCountries);
 
-    function setCountriesWithSumPopulation(countries) {
-        countries.forEach(function (e) {
+    countries.forEach(function (e) {
+        // noinspection ES6ConvertVarToLetConst
+        var result = {};
+
+        function setCountriesWithSumPopulation(countries) {
             // noinspection ES6ConvertVarToLetConst
-            var sumPopulation = e.cities.reduce(function (sum, e) {
+            var sumPopulation = countries.cities.reduce(function (sum, e) {
                 return sum + e.population;
             }, 0);
 
-           // noinspection ES6ConvertVarToLetConst
-            var result = e.name + ": " + sumPopulation;
+            result = countries.name + ": " + sumPopulation;
+        }
 
-            console.log(result);
-        });
-    }
+        setCountriesWithSumPopulation(e);
 
-    setCountriesWithSumPopulation(countries);
+        console.log(result)
+    });
 })();
