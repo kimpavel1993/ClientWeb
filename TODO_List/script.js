@@ -6,23 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // noinspection ES6ConvertVarToLetConst
     var errorMessage = document.getElementById("error-message");
 
-
     document.getElementById("add-button").addEventListener("click", function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.value;
 
-        if (text === "") {
-            errorMessage.textContent = "Введите текст";
-            return;
-        }
+            if (text === "") {
+                errorMessage.textContent = "Введите текст";
+                return;
+            }
 
-        errorMessage.textContent = "";
+            errorMessage.textContent = "";
 
         // noinspection ES6ConvertVarToLetConst
         var listItem = document.createElement("li");
 
         function setViewMode() {
-
             listItem.innerHTML = "<span class='text'></span><button class='edit-button' type='button'>Редактировать</button><button class='delete-button' type='button'>Удалить</button>";
 
             listItem.querySelector(".edit-button").addEventListener("click", function () {
@@ -31,7 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.querySelector(".edit-text").value = text;
 
                 listItem.querySelector(".save-button").addEventListener("click", function () {
+                    if (listItem.querySelector(".edit-text").value === "") {
+                        errorMessage.textContent = "Введите текст";
+                        return;
+                    }
+
                     text = listItem.querySelector(".edit-text").value;
+
+                    errorMessage.textContent = "";
 
                     setViewMode();
                 });

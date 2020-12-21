@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.text-style {
+    font-family: "Arial", Georgia, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+.text-style h1 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.text-style button {
+    position: relative;
+    margin-left: 2px;
+    padding: revert;
+    background-color: #2075EB;
+    color: #FFF;
+}
+
+.text-style button:hover {
+    background-color: #000080;
+    color: #075C8F;
+    cursor: pointer;
+}
+
+.list-style {
+    font-family: "Cambria Math", Georgia, sans-serif;
+    font-weight: normal;
+}
+
+.error {
+    color: #EC1528
+}
+
+.list-style {
+    list-style: square;
+    color: #378DB2;
+}

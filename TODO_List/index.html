@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>TODO List</title>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-<div>
+<div class = "text-style">
+    <h1>TODO List</h1>
     <label for="text-field"></label>
     <input type="text" id="text-field" placeholder="Введите запись"/>
 
     <button type="button" id="add-button">Добавить</button>
 
     <div class="error" id="error-message"></div>
+
+    <ul class = "list-style" id="list"></ul>
 </div>
 
-<ul id="list"></ul>
 </body>
 </html>
