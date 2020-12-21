@@ -3,7 +3,7 @@
 }
 
 .text-style {
-    font-family: "Arial Narrow", Georgia, sans-serif;
+    font-family: "Arial", Georgia, sans-serif;
     font-weight: normal;
     color: #676565;
 }
@@ -14,7 +14,6 @@
     margin-bottom: 6px;
     font-size: 26pt;
     font-weight: normal;
-    font-family: "Arial", Georgia, sans-serif;
 }
 
 .form-style {
@@ -32,24 +31,26 @@
     font-size: 12pt;
 }
 
-input[type="text"] {
+.form-style input[type="text"] {
     position: relative;
     margin-left: 20px;
+    border: none;
     width: 802px;
     height: 40px;
     padding-left: 12px;
     font-size: 12pt;
-    font-family: "Arial Narrow", Georgia, sans-serif;
 }
 
-textarea[name="comment"] {
+.form-style textarea[name="comment"] {
     position: relative;
     margin-left: 20px;
     width: 802px;
     height: 129px;
+    border: none;
     padding-left: 12px;
     font-size: 12pt;
-    font-family: "Arial Narrow", Georgia, sans-serif;
+    font-family: "Arial", Georgia, sans-serif;
+    resize: vertical;
 }
 
 .form-style p.form-indication {
@@ -66,19 +67,26 @@ textarea[name="comment"] {
     height: 37px;
     width: 171px;
     background-color: #378DB2;
-    color: #FFFFFF;
+    color: #FFF;
     border: 0;
     font-size: 12pt;
     font-weight: bolder;
 }
 
+.form-style button:hover {
+    background-color: #000080;
+    color: #FFF;
+    cursor: pointer;
+}
+
 ::-webkit-input-placeholder {
-    color: #999999;
+    color: #999;
 }
 
 ::-moz-placeholder {
-    color: #999999;
+    color: #999;
 }
+
 :-ms-input-placeholder {
-    color: #999999;
+    color: #999;
 }
