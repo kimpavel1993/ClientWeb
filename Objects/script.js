@@ -47,58 +47,48 @@
                 {
                     name: "Марсель",
                     population: 861635
-                },
+                }
             ]
         }
     ];
 
     console.log(countries);
 
-    function getMaxCitiesCountry() {
+    // noinspection ES6ConvertVarToLetConst
+    var maxCitiesCountries = [];
 
+    function setMaxCitiesCountry(countries) {
         // noinspection ES6ConvertVarToLetConst
-        var maxCitiesCount = 0
-
-        // noinspection ES6ConvertVarToLetConst
-        countries.forEach(function (e) {
-            if (maxCitiesCount < e.cities.length) {
-                maxCitiesCount = e.cities.length
+        var maxCitiesCount = countries.reduce(function (count, e) {
+            if (count < e.cities.length) {
+                count = e.cities.length;
             }
-        })
 
-        // noinspection ES6ConvertVarToLetConst
-        var maxCitiesCountry = countries.filter(function (e) {
-            return e.cities.length >= maxCitiesCount;
-        })
+            return count;
+        }, 0);
 
-        console.log("Страны, с максимальным количеством городов", maxCitiesCountry);
+        maxCitiesCountries = countries.filter(function (e) {
+            return e.cities.length === maxCitiesCount;
+        });
     }
 
-    getMaxCitiesCountry();
+    setMaxCitiesCountry(countries);
 
-    function getCountriesWithSumPopulation() {
+    console.log("Страны, с максимальным количеством городов", maxCitiesCountries);
+
+    function setCountriesWithSumPopulation(countries) {
         countries.forEach(function (e) {
             // noinspection ES6ConvertVarToLetConst
-            var count = 0;
+            var sumPopulation = e.cities.reduce(function (sum, e) {
+                return sum + e.population;
+            }, 0);
 
-            e.cities.forEach(function (e) {
-                count += e.population;
+           // noinspection ES6ConvertVarToLetConst
+            var result = e.name + ": " + sumPopulation;
 
-            })
-
-            e.sumPopulation = count;
+            console.log(result);
         });
-
-        // noinspection ES6ConvertVarToLetConst
-        var result = countries.reduce(function (e, value) {
-            // noinspection JSUnresolvedVariable
-            e[value.name] = value.sumPopulation;
-
-            return e;
-        }, {});
-
-        console.log(result);
     }
 
-    getCountriesWithSumPopulation();
+    setCountriesWithSumPopulation(countries);
 })();
