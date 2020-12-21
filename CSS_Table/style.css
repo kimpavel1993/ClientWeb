@@ -2,42 +2,44 @@
     box-sizing: border-box;
 }
 
-.table-style > table {
-    border: 1px solid #CCCCCC;
+.table-style table {
+    border: 1px solid #CCC;
     text-align: left;
     font-family: "Gill Sans MT", Georgia, sans-serif;
-    font-size: 18px;
-    position: relative;
+    font-size: 24px;
     margin: 0 auto;
 }
 
-.table-style th, td {
-    text-indent: 10px;
-    position: relative;
-    border: 1px solid #CCCCCC;;
+.table-style th, .table-style td {
     font-weight: normal;
+    white-space: nowrap;
+    padding-left: 10px;
+    border: 1px solid #CCC;;
     vertical-align: middle;
     height: 47px;
 }
 
 .table-style th {
     background-color: #3498DB;
-    color: white;
-    height: 46px;
+    color: #FFF;
 }
 
 .table-style tr:nth-child(odd) {
-    background-color: #EEEEEE;
+    background-color: #EEE;
 }
 
-.first-width {
+.first-name-column-width {
     width: 160px;
 }
 
-.second-width {
+.second-name-column-width {
+    width: 160px;
+}
+
+.job-title-column-width {
     width: 280px;
 }
 
-.third-width {
+.twitter-column-width {
     width: 180px;
 }
