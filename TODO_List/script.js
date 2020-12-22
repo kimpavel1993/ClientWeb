@@ -4,18 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // noinspection ES6ConvertVarToLetConst
     var list = document.getElementById("list");
     // noinspection ES6ConvertVarToLetConst
-    var errorMessage = document.getElementById("error-message");
+    var error = document.getElementById("error-message");
 
     document.getElementById("add-button").addEventListener("click", function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.value;
 
         if (text.trim().length === 0) {
-            errorMessage.textContent = "Введите текст";
+            error.textContent = "Введите текст";
             return;
         }
 
-        errorMessage.textContent = "";
+        error.textContent = "";
 
         // noinspection ES6ConvertVarToLetConst
         var listItem = document.createElement("li");
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 listItem.querySelector(".save-button").addEventListener("click", function () {
                     if (listItem.querySelector(".edit-text").value.trim().length === 0) {
-                        errorMessage.textContent = "Введите текст";
+                        error.textContent = "Введите текст";
                         return;
                     }
 
                     text = listItem.querySelector(".edit-text").value;
 
-                    errorMessage.textContent = "";
+                    error.textContent = "";
 
                     setViewMode();
                 });
