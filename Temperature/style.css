@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.text-style {
+    font-family: "Arial", Georgia, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+.text-style button {
+    position: relative;
+    margin-left: 2px;
+    padding: revert;
+    background-color: #2075EB;
+    color: #FFF;
+}
+
+.text-style button:hover {
+    background-color: #000080;
+    color: #075C8F;
+    cursor: pointer;
+}
+
+.result-temperature-style {
+    color: #075C8F;
+}
+
+.error {
+    color: #EC1528
+}

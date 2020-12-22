@@ -1,28 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     // noinspection ES6ConvertVarToLetConst
-    var newCelsiusTextField = document.getElementById("celsius-text-field");
+    var celsiusTextField = document.getElementById("celsius-text-field");
     // noinspection ES6ConvertVarToLetConst
-    var newKelvinText = document.getElementById("kelvin-message-result");
+    var kelvinTemperature = document.getElementById("result-kelvin-message");
     // noinspection ES6ConvertVarToLetConst
-    var newFahrenheitText = document.getElementById("fahrenheit-message-result");
+    var fahrenheitTemperature = document.getElementById("result-fahrenheit-message");
     // noinspection ES6ConvertVarToLetConst
-    var errorMessage = document.getElementById("error-message");
+    var error = document.getElementById("error-message");
 
     document.getElementById("convert-button").addEventListener("click", function () {
-        if (isNaN(newCelsiusTextField.value) || newCelsiusTextField.value === "") {
-            errorMessage.textContent = "Введите корректное значение"
+        if (isNaN(celsiusTextField.value) || celsiusTextField.value.trim().length === 0) {
+            error.textContent = "Введите корректное значение";
 
-            newKelvinText.textContent = "";
-            newFahrenheitText.textContent = "";
+            kelvinTemperature.textContent = "";
+            fahrenheitTemperature.textContent = "";
             return;
         }
 
-        errorMessage.textContent = "";
+        error.textContent = "";
 
-        newKelvinText.textContent = "Температура по градусам Кельвина: " + (parseFloat(newCelsiusTextField.value) + 273.15);
-        newFahrenheitText.textContent = "Температура по градусам Фаренгейта: " + (parseFloat(newCelsiusTextField.value) * 1.8 + 32);
-
-        newKelvinText.appendChild(newKelvinText);
-        newFahrenheitText.appendChild(newKelvinText);
+        kelvinTemperature.textContent = "Температура в градусах Кельвина: " + (parseFloat(celsiusTextField.value) + 273.15);
+        fahrenheitTemperature.textContent = "Температура по градусам Фаренгейта: " + (parseFloat(celsiusTextField.value) * 1.8 + 32);
     });
 });
