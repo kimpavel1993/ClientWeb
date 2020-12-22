@@ -1,18 +1,18 @@
 $(document).ready(function () {
     // noinspection ES6ConvertVarToLetConst
-    var secondNameTextField = $("#text-field-second-name");
+    var secondNameTextField = $("#second-name-text-field");
     // noinspection ES6ConvertVarToLetConst
-    var firstNameTextField = $("#text-field-first-name");
+    var firstNameTextField = $("#first-name-text-field");
     // noinspection ES6ConvertVarToLetConst
-    var phoneTextField = $("#text-field-phone");
+    var phoneTextField = $("#phone-text-field");
     // noinspection ES6ConvertVarToLetConst
     var table = $("#table");
     // noinspection ES6ConvertVarToLetConst
-    var secondNameErrorMessage = $("#error-message-second-name");
+    var secondNameError = $("#second-name-error-message");
     // noinspection ES6ConvertVarToLetConst
-    var firstNameErrorMessage = $("#error-message-first-name");
+    var firstNameError = $("#first-name-error-message");
     // noinspection ES6ConvertVarToLetConst
-    var phoneErrorMessage = $("#error-message-phone");
+    var phoneError = $("#phone-error-message");
 
     $("#add-button").click(function () {
         // noinspection ES6ConvertVarToLetConst
@@ -25,31 +25,31 @@ $(document).ready(function () {
 
         if (secondNameText.trim().length === 0 || firstNameText.trim().length === 0 || phoneNameText.trim().length === 0) {
             if (secondNameText.trim().length === 0) {
-                secondNameErrorMessage.text("Заполните поле Фамилия");
+                secondNameError.text("Заполните поле Фамилия");
 
                 secondNameTextField.css({backgroundColor: "red"});
             } else {
-                secondNameErrorMessage.text("");
+                secondNameError.text("");
 
                 secondNameTextField.css({backgroundColor: "white"});
             }
 
             if (firstNameText.trim().length === 0) {
-                firstNameErrorMessage.text("Заполните поле Имя");
+                firstNameError.text("Заполните поле Имя");
 
                 firstNameTextField.css({backgroundColor: "red"});
             } else {
-                firstNameErrorMessage.text("");
+                firstNameError.text("");
 
                 firstNameTextField.css({backgroundColor: "white"});
             }
 
             if (phoneNameText.trim().length === 0) {
-                phoneErrorMessage.text("Заполните поле Номер телефона");
+                phoneError.text("Заполните поле Номер телефона");
 
                 phoneTextField.css({backgroundColor: "red"});
             } else {
-                phoneErrorMessage.text("");
+                phoneError.text("");
 
                 phoneTextField.css({backgroundColor: "white"});
             }
@@ -57,9 +57,9 @@ $(document).ready(function () {
             return;
         }
 
-        secondNameErrorMessage.text("");
-        firstNameErrorMessage.text("");
-        phoneErrorMessage.text("");
+        secondNameError.text("");
+        firstNameError.text("");
+        phoneError.text("");
 
         secondNameTextField.css({backgroundColor: "white"});
         firstNameTextField.css({backgroundColor: "white"});
