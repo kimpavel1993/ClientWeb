@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         return;
                     }
 
-                    text = listItem.querySelector(".edit-text").value;
-
                     error.textContent = "";
+
+                    text = listItem.querySelector(".edit-text").value;
 
                     setViewMode();
                 });
