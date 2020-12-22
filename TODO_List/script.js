@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.value;
 
-            if (text === "" || text.trim().length === 0) {
-                errorMessage.textContent = "Введите текст";
-                return;
-            }
+        if (text.trim().length === 0) {
+            errorMessage.textContent = "Введите текст";
+            return;
+        }
 
-            errorMessage.textContent = "";
+        errorMessage.textContent = "";
 
         // noinspection ES6ConvertVarToLetConst
         var listItem = document.createElement("li");
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.querySelector(".edit-text").value = text;
 
                 listItem.querySelector(".save-button").addEventListener("click", function () {
-                    if (listItem.querySelector(".edit-text").value === "" || listItem.querySelector(".edit-text").value.trim().length === 0) {
+                    if (listItem.querySelector(".edit-text").value.trim().length === 0) {
                         errorMessage.textContent = "Введите текст";
                         return;
                     }
