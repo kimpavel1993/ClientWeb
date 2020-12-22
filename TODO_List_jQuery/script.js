@@ -4,18 +4,18 @@ $(document).ready(function () {
     // noinspection ES6ConvertVarToLetConst
     var list = $("#list");
     // noinspection ES6ConvertVarToLetConst
-    var errorMessage = $("#error-message");
+    var error = $("#error-message");
 
     $("#add-button").click(function () {
         // noinspection ES6ConvertVarToLetConst
         var text = textField.val();
 
-        if (text === "") {
-            errorMessage.text("Введите текст");
+        if (text.trim().length === 0) {
+            error.text("Введите текст");
             return;
         }
 
-        errorMessage.text("");
+        error.text("");
 
         // noinspection ES6ConvertVarToLetConst
         var listItem = $("<li>");
@@ -29,6 +29,13 @@ $(document).ready(function () {
                 listItem.find(".edit-text").val(text);
 
                 listItem.find(".save-button").click(function () {
+                    if (listItem.find(".edit-text").val().trim().length === 0) {
+                        error.text("Введите текст");
+                        return;
+                    }
+
+                    error.text("");
+
                     text = listItem.find(".edit-text").val();
 
                     setViewMode();

@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>TODO List jQuery</title>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="libs/jquery-3.5.1.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
-<div>
+<div class="text-style">
+    <h1>TODO List</h1>
+
     <label for="text-field"></label>
     <input type="text" id="text-field" placeholder="Введите запись"/>
 
     <button type="button" id="add-button">Добавить</button>
 
     <div class="error" id="error-message"></div>
-</div>
 
-<ul id="list"></ul>
+    <ul class="list-style" id="list"></ul>
+</div>
 </body>
 </html>
