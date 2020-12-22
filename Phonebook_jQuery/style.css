@@ -2,15 +2,36 @@
     box-sizing: border-box;
 }
 
+.text-style {
+    font-family: "Arial", Georgia, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+.text-style button {
+    position: relative;
+    margin-left: 2px;
+    padding: revert;
+    background-color: #2075EB;
+    color: #FFF;
+}
+
+.text-style button:hover {
+    background-color: #000080;
+    color: #075C8F;
+    cursor: pointer;
+}
+
 .table-contacts th, td{
-    text-indent: 10px;
     position: relative;
     border: 1px solid #CCCCCC;;
     font-weight: normal;
     vertical-align: middle;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
-    margin: 0 auto;
+    padding: 5px;
 }
 
 .table-contacts th {
@@ -21,4 +42,8 @@
 
 .table-contacts td{
     background-color: #EEEEEE;
+}
+
+.error {
+    color: #EC1528
 }

@@ -23,28 +23,34 @@ $(document).ready(function () {
         var phoneNameText = phoneTextField.val();
         // noinspection ES6ConvertVarToLetConst
 
-        if (secondNameText === "" || firstNameText === "" || phoneNameText === "") {
-            if (secondNameText === "") {
+        if (secondNameText.trim().length === 0 || firstNameText.trim().length === 0 || phoneNameText.trim().length === 0) {
+            if (secondNameText.trim().length === 0) {
                 secondNameErrorMessage.text("Заполните поле Фамилия");
+
                 secondNameTextField.css({backgroundColor: "red"});
             } else {
                 secondNameErrorMessage.text("");
+
                 secondNameTextField.css({backgroundColor: "white"});
             }
 
-            if (firstNameText === "") {
+            if (firstNameText.trim().length === 0) {
                 firstNameErrorMessage.text("Заполните поле Имя");
+
                 firstNameTextField.css({backgroundColor: "red"});
             } else {
                 firstNameErrorMessage.text("");
+
                 firstNameTextField.css({backgroundColor: "white"});
             }
 
-            if (phoneNameText === "") {
+            if (phoneNameText.trim().length === 0) {
                 phoneErrorMessage.text("Заполните поле Номер телефона");
+
                 phoneTextField.css({backgroundColor: "red"});
             } else {
                 phoneErrorMessage.text("");
+
                 phoneTextField.css({backgroundColor: "white"});
             }
 
