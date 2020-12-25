@@ -1,23 +1,19 @@
 $(document).ready(function () {
-    // noinspection ES6ConvertVarToLetConst
     var textField = $("#text-field");
-    // noinspection ES6ConvertVarToLetConst
     var list = $("#list");
-    // noinspection ES6ConvertVarToLetConst
     var error = $("#error-message");
 
     $("#add-button").click(function () {
-        // noinspection ES6ConvertVarToLetConst
         var text = textField.val();
 
         if (text.trim().length === 0) {
             error.text("Введите текст");
+
             return;
         }
 
         error.text("");
 
-        // noinspection ES6ConvertVarToLetConst
         var listItem = $("<li>");
 
         function setViewMode() {
@@ -31,6 +27,7 @@ $(document).ready(function () {
                 listItem.find(".save-button").click(function () {
                     if (listItem.find(".edit-text").val().trim().length === 0) {
                         error.text("Введите текст");
+
                         return;
                     }
 
@@ -42,6 +39,8 @@ $(document).ready(function () {
                 });
 
                 listItem.find(".cancel-button").click(function () {
+                    error.text("");
+
                     setViewMode();
                 });
             });
