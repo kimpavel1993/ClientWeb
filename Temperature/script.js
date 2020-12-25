@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // noinspection ES6ConvertVarToLetConst
     var celsiusTextField = document.getElementById("celsius-text-field");
-    // noinspection ES6ConvertVarToLetConst
     var kelvinTemperature = document.getElementById("result-kelvin-message");
-    // noinspection ES6ConvertVarToLetConst
     var fahrenheitTemperature = document.getElementById("result-fahrenheit-message");
-    // noinspection ES6ConvertVarToLetConst
     var error = document.getElementById("error-message");
 
     document.getElementById("convert-button").addEventListener("click", function () {
