@@ -8,6 +8,8 @@
     font-size: 14px;
     line-height: 30px;
     white-space: nowrap;
+    position: relative;
+    padding: 5px;
 }
 
 .text-style h1 {
