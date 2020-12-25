@@ -6,13 +6,13 @@
 
     console.log("Массив:", array1);
 
-    function setDescendingSort(array) {
+    function showDescendingSort(array) {
         array.sort(function (e1, e2) {
             return e2 - e1;
         });
     }
 
-    setDescendingSort(array1);
+    showDescendingSort(array1);
 
     console.log("Массив, отсортированный по убыванию: ", array1);
 
@@ -21,12 +21,12 @@
     // noinspection ES6ConvertVarToLetConst
     var subarray2 = [];
 
-    function setSubArray(array) {
+    function showSubArray(array) {
         subarray1 = array.slice(0, 5);
         subarray2 = array.slice(array1.length - 5);
     }
 
-    setSubArray(array1);
+    showSubArray(array1);
 
     console.log("Первые пять элементов массива: ", subarray1);
     console.log("Последние пять элементов массива: ", subarray2);
@@ -34,7 +34,7 @@
     // noinspection ES6ConvertVarToLetConst
     var evenNumbersSum = 0;
 
-    function setEvenNumberSum(array) {
+    function showEvenNumberSum(array) {
         evenNumbersSum = array.filter(function (e) {
             return e % 2 === 0;
         }).reduce(function (e1, e2) {
@@ -42,7 +42,7 @@
         }, 0);
     }
 
-    setEvenNumberSum(array1);
+    showEvenNumberSum(array1);
 
     console.log("Сумма четных чисел массива: ", evenNumbersSum);
 
@@ -59,7 +59,7 @@
     // noinspection ES6ConvertVarToLetConst
     var result = [];
 
-    function setEvenNumbersList(array) {
+    function showEvenNumbersList(array) {
         result = array.filter(function (e) {
             return e % 2 === 0;
         }).map(function (e) {
@@ -67,7 +67,7 @@
         });
     }
 
-    setEvenNumbersList(array2);
+    showEvenNumbersList(array2);
 
     console.log("Квадраты четных чисел массива: ", result)
 })();
