@@ -8,6 +8,8 @@
     font-size: 14px;
     line-height: 30px;
     white-space: nowrap;
+    position: relative;
+    padding: 5px;
 }
 
 .text-style button {
@@ -24,10 +26,9 @@
     cursor: pointer;
 }
 
-.table-contacts th, td{
+.table-contacts th, .table-contacts td {
     position: relative;
-    border: 1px solid #CCCCCC;;
-    font-weight: normal;
+    border: 1px solid #CCC;
     vertical-align: middle;
     text-align: center;
     font-size: 18px;
@@ -40,10 +41,14 @@
     height: 46px;
 }
 
-.table-contacts td{
-    background-color: #EEEEEE;
+.table-contacts td {
+    background-color: #EEE;
 }
 
 .error {
-    color: #EC1528
+    color: #EC1528;
+}
+
+.background-color-error {
+    background-color: #EC1528;
 }
