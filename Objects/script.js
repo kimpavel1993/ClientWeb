@@ -57,7 +57,7 @@
     // noinspection ES6ConvertVarToLetConst
     var maxCitiesCountries = [];
 
-    function setMaxCitiesCountry(countries) {
+    function showMaxCitiesCountry(countries) {
         // noinspection ES6ConvertVarToLetConst
         var maxCitiesCount = countries.reduce(function (count, e) {
             if (count < e.cities.length) {
@@ -72,7 +72,7 @@
         });
     }
 
-    setMaxCitiesCountry(countries);
+    showMaxCitiesCountry(countries);
 
     console.log("Страны, с максимальным количеством городов", maxCitiesCountries);
 
@@ -80,7 +80,7 @@
         // noinspection ES6ConvertVarToLetConst
         var result = {};
 
-        function setCountriesWithSumPopulation(countries) {
+        function showCountriesWithSumPopulation(countries) {
             // noinspection ES6ConvertVarToLetConst
             var sumPopulation = countries.cities.reduce(function (sum, e) {
                 return sum + e.population;
@@ -89,7 +89,7 @@
             result = countries.name + ": " + sumPopulation;
         }
 
-        setCountriesWithSumPopulation(e);
+        showCountriesWithSumPopulation(e);
 
         console.log(result)
     });
