@@ -14,7 +14,7 @@
     showDescendingSort(array1);
 
     console.log("Массив, отсортированный по убыванию: ", array1);
-
+    
     var subarray1 = [];
     var subarray2 = [];
 
@@ -27,7 +27,7 @@
 
     console.log("Первые пять элементов массива: ", subarray1);
     console.log("Последние пять элементов массива: ", subarray2);
-
+    
     var evenNumbersSum = 0;
 
     function showEvenNumberSum(array) {
@@ -41,9 +41,9 @@
     showEvenNumberSum(array1);
 
     console.log("Сумма четных чисел массива: ", evenNumbersSum);
-
+    
     var array2 = [];
-
+    
     for (var i = 1; i <= 100; i++) {
         array2.push(i);
     }
