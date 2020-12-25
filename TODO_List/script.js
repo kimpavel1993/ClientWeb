@@ -1,13 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // noinspection ES6ConvertVarToLetConst
     var textField = document.getElementById("text-field");
-    // noinspection ES6ConvertVarToLetConst
     var list = document.getElementById("list");
-    // noinspection ES6ConvertVarToLetConst
     var error = document.getElementById("error-message");
 
     document.getElementById("add-button").addEventListener("click", function () {
-        // noinspection ES6ConvertVarToLetConst
         var text = textField.value;
 
         if (text.trim().length === 0) {
@@ -17,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         error.textContent = "";
 
-        // noinspection ES6ConvertVarToLetConst
         var listItem = document.createElement("li");
 
         function setViewMode() {
@@ -42,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 listItem.querySelector(".cancel-button").addEventListener("click", function () {
+                    error.textContent = "";
+                    
                     setViewMode();
                 });
             });
