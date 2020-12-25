@@ -1,7 +1,6 @@
 "use strict";
 
 (function () {
-    // noinspection ES6ConvertVarToLetConst
     var countries = [
         {
             name: "Россия",
@@ -54,11 +53,9 @@
 
     console.log(countries);
 
-    // noinspection ES6ConvertVarToLetConst
     var maxCitiesCountries = [];
 
     function showMaxCitiesCountry(countries) {
-        // noinspection ES6ConvertVarToLetConst
         var maxCitiesCount = countries.reduce(function (count, e) {
             if (count < e.cities.length) {
                 count = e.cities.length;
@@ -77,11 +74,9 @@
     console.log("Страны, с максимальным количеством городов", maxCitiesCountries);
 
     countries.forEach(function (e) {
-        // noinspection ES6ConvertVarToLetConst
         var result = {};
 
         function showCountriesWithSumPopulation(countries) {
-            // noinspection ES6ConvertVarToLetConst
             var sumPopulation = countries.cities.reduce(function (sum, e) {
                 return sum + e.population;
             }, 0);
