@@ -1,7 +1,6 @@
 "use strict";
 
 (function () {
-    // noinspection ES6ConvertVarToLetConst
     var array1 = [1, 3, 7, 43, -31, 5, 312, 82, 10, 123, 121];
 
     console.log("Массив:", array1);
@@ -16,9 +15,7 @@
 
     console.log("Массив, отсортированный по убыванию: ", array1);
 
-    // noinspection ES6ConvertVarToLetConst
     var subarray1 = [];
-    // noinspection ES6ConvertVarToLetConst
     var subarray2 = [];
 
     function showSubArray(array) {
@@ -31,7 +28,6 @@
     console.log("Первые пять элементов массива: ", subarray1);
     console.log("Последние пять элементов массива: ", subarray2);
 
-    // noinspection ES6ConvertVarToLetConst
     var evenNumbersSum = 0;
 
     function showEvenNumberSum(array) {
@@ -46,17 +42,14 @@
 
     console.log("Сумма четных чисел массива: ", evenNumbersSum);
 
-    // noinspection ES6ConvertVarToLetConst
     var array2 = [];
 
-    // noinspection ES6ConvertVarToLetConst
     for (var i = 1; i <= 100; i++) {
         array2.push(i);
     }
 
     console.log("Массив чисел от 1 до 100: ", array2);
-
-    // noinspection ES6ConvertVarToLetConst
+    
     var result = [];
 
     function showEvenNumbersList(array) {
