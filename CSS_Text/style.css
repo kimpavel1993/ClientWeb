@@ -10,6 +10,9 @@
     font-weight: normal;
     font-size: 21px;
     line-height: 30px;
+    position: relative;
+    margin: 0 auto;
+
 }
 
 .first-text-style h1 {
