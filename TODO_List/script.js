@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (text.trim().length === 0) {
             error.textContent = "Введите текст";
+
             return;
         }
 
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.querySelector(".save-button").addEventListener("click", function () {
                     if (listItem.querySelector(".edit-text").value.trim().length === 0) {
                         error.textContent = "Введите текст";
+
                         return;
                     }
 
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 listItem.querySelector(".cancel-button").addEventListener("click", function () {
                     error.textContent = "";
-                    
+
                     setViewMode();
                 });
             });
