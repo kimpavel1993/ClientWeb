@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             kelvinTemperature.textContent = "";
             fahrenheitTemperature.textContent = "";
+
             return;
         }
 
