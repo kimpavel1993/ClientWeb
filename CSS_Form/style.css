@@ -6,6 +6,9 @@
     font-family: "Arial", Georgia, sans-serif;
     font-weight: normal;
     color: #676565;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
 }
 
 .text-style h1 {
