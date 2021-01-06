@@ -2,7 +2,6 @@ $(document).ready(function () {
     var textField = $("#text-field");
     var list = $("#list");
     var error = $("#error-message");
-    var errorEdit = $("#edit-error-message");
 
     $("#add-button").click(function () {
         var text = textField.val();
@@ -40,8 +39,6 @@ $(document).ready(function () {
                 });
 
                 listItem.find(".cancel-button").click(function () {
-                    errorEdit.text("");
-
                     setViewMode();
                 });
             });
