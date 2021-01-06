@@ -56,7 +56,7 @@ $(document).ready(function () {
 
         var tableItem = $("<tbody></tbody>");
 
-        tableItem.html("<tr><td><span class ='index'></span></td><td><span class ='second-name'></span></td><td><span class ='first-name'></span></td><td><span class ='phone'></span></td><td><button class ='delete-button'>X</button></td></tr>");
+        tableItem.html("<tr><td><span class='index'></span></td><td><span class='second-name'></span></td><td><span class='first-name'></span></td><td><span class='phone'></span></td><td><button class='delete-button'>X</button></td></tr>");
 
         tableItem.find(".second-name").text(secondNameText);
         tableItem.find(".first-name").text(firstNameText);
@@ -64,6 +64,10 @@ $(document).ready(function () {
 
         tableItem.find(".delete-button").click(function () {
             tableItem.remove();
+
+            table.find("tr").each(function (i) {
+                $(this).find(".index").text(i);
+            });
         });
 
         table.append(tableItem);
