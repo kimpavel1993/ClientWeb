@@ -44,3 +44,9 @@
 .list-style {
     color: #378DB2;
 }
+
+.edit-error-message {
+    position: relative;
+    margin-left: 2px;
+    color: #EC1528
+}

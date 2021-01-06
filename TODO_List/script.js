@@ -20,18 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.innerHTML = "<span class='text'></span><button class='edit-button' type='button'>Редактировать</button><button class='delete-button' type='button'>Удалить</button>";
 
             listItem.querySelector(".edit-button").addEventListener("click", function () {
-                listItem.innerHTML = "<input class='edit-text' /><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button>";
+                listItem.innerHTML = "<input class='edit-text' /><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button><span class='edit-error-message'></span>";
 
                 listItem.querySelector(".edit-text").value = text;
 
                 listItem.querySelector(".save-button").addEventListener("click", function () {
                     if (listItem.querySelector(".edit-text").value.trim().length === 0) {
-                        error.textContent = "Введите текст";
+                        listItem.querySelector(".edit-error-message").textContent = "Введите текст";
 
                         return;
                     }
 
-                    error.textContent = "";
+                    listItem.querySelector(".edit-error-message").textContent = "";
 
                     text = listItem.querySelector(".edit-text").value;
 
@@ -39,8 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 listItem.querySelector(".cancel-button").addEventListener("click", function () {
-                    error.textContent = "";
-
                     setViewMode();
                 });
             });
