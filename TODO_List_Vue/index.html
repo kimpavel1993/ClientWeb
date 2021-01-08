@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <title>TODO List Vue</title>
+</head>
+<body>
+<div class="container">
+    <div v-cloak id="app">
+        <todo-list></todo-list>
+    </div>
+</div>
+
+<script id="todo-list-template" type="text/x-template">
+    <div>
+        <h1> TODO List</h1>
+
+        <div class="row no-gutters">
+            <div class="col pr-2">
+                <label>
+                    <input v-model="newTodoText" class="form-control mb-2" type="text"/>
+                </label>
+
+                    <button @click="addNewTodoItem" class="btn btn-success mb-2" type="button">Добавить</button>
+            </div>
+
+        </div>
+
+        <div class="text-danger">{{errorMessage}}</div>
+        <ul>
+            <todo-list-item class="py-2"
+                            v-for="item in items"
+                            @save-item="saveItem"
+                            @delete-item="deleteItem"
+                            :item="item"
+                            :key="item.id"></todo-list-item>
+        </ul>
+    </div>
+</script>
+
+<script id="todo-list-item-template" type="text/x-template">
+    <li class="py-2">
+        <template v-if="isEditing">
+            <label>
+                <input v-model="editText" type="text"/>
+            </label>
+
+            <button @click="saveItem" class="btn btn-success mb-2 mr-2" type="button">Сохранить</button>
+            <button @click="cancelEditItem" class="btn btn-danger mb-2 mr-2" type="button">Отменить</button>
+
+            <span v-bind:class="{'text-danger': hasError, 'text-hide' : isCorrect}">Введите текст</span>
+        </template>
+
+        <template v-else>
+            <span>{{ item.text }}</span>
+
+            <button @click="startEditItem" class="btn btn-success mb-2 mr-2" type="button">Изменить</button>
+            <button @click="deleteItem" class="btn btn-danger mb-2 mr-2" type="button">Удалить</button>
+        </template>
+    </li>
+</script>
+</body>
+</html>
