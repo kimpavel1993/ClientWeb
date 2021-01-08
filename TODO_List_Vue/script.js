@@ -23,7 +23,6 @@ Vue.component("todo-list", {
             this.items.push({
                 id: this.newId,
                 text: text
-
             });
 
             this.errorMessage = ""
