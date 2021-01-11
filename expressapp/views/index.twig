@@ -1,0 +1,118 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    {% verbatim %}
+
+<div class="container" v-cloak id="app">
+    <h1 class="mb-3">PhoneBook</h1>
+
+    <form class="mb-4 mr-4">
+       <div class="row">
+          <div class="col-lg-6">
+              <div class="form-group">
+                  <label>Фамилия</label>
+                  <input type="text" class="form-control" input v-model="secondName">
+              </div>
+
+              <div class="form-group">
+                  <label>Имя</label>
+                  <input type="text" class="form-control" input v-model="firstName">
+              </div>
+
+              <div class="form-group">
+                  <label>Номер телефона</label>
+                  <input type="text" class="form-control" input v-model="phone">
+              </div>
+
+              <button class="btn btn-primary" @click="addContact" type="button">Добавить</button>
+          </div>
+       </div>
+     </form>
+
+     <div class="text-danger">
+        <p>{{ secondNameErrorMessage }}</p>
+        <p>{{ firstNameErrorMessage }}</p>
+        <p>{{ phoneErrorMessage }}</p>
+     </div>
+
+    <div class="mb-4 form-inline">
+       <div class="row">
+          <div class="col-12 col-lg-auto mb-2">
+              <input class="form-control" placeholder="Поиск" v-model="term" type="text" />
+          </div>
+          <div class="col-auto mb-2">
+              <button class="btn btn-primary" @click="loadContacts" type="button">Поиск</button>
+              <button class="btn btn-secondary" @click="clearSearch" type="button">Очистить</button>
+          </div>
+       </div>
+    </div>
+
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="(contact, index) in contacts" :key="contact.id">
+            <td>{{ index +1 }}.</td>
+            <td>{{ contact.secondName }}</td>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>
+                <button class="btn btn-danger" @click="deleteContact(contact)" type="button" title="Удалить">X</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+
+    <modal ref="confirmDeleteDialog">
+        <p>Вы точно хотите удалить контакт?</p>
+
+        <template v-slot:title>
+           Подтверждение удаления
+        </template>
+
+        <template v-slot:save-edit-button-text>
+           Подтвердить
+        </template>
+
+        <template v-slot:cancel-button-text>
+           Отмена
+        </template>
+    </modal>
+</div>
+
+<script type="text/x-template" id="modal-template">
+<div ref="modal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <slot name="title"></slot>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <slot></slot>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <slot name="cancel-button-text"></slot>
+        </button>
+        <button @click="saveEdit" type="button" class="btn btn-primary">
+          <slot name="save-edit-button-text"></slot>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    {% endverbatim %}
+{% endblock %}

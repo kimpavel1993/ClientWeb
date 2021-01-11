@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+
+    <title>My first Vue app</title>
+</head>
+<body>
+<form
+        id="app"
+        @submit="checkForm"
+        action="https://vuejs.org/"
+        method="post"
+>
+
+    <p v-if="errors.length">
+        <b>Пожалуйста исправьте указанные ошибки:</b>
+    <ul>
+        <li v-for="error in errors">{{ error }}</li>
+    </ul>
+    </p>
+
+    <p>
+        <label for="name">Имя</label>
+        <input
+                id="name"
+                v-model="name"
+                type="text"
+                name="name"
+        >
+    </p>
+
+    <p>
+        <label for="age">Возраст</label>
+        <input
+                id="age"
+                v-model="age"
+                type="number"
+                name="age"
+                min="0"
+        >
+    </p>
+
+    <p>
+        <label for="movie">Любимый фильм</label>
+        <select
+                id="movie"
+                v-model="movie"
+                name="movie"
+        >
+            <option>Star Wars</option>
+            <option>Vanilla Sky</option>
+            <option>Atomic Blonde</option>
+        </select>
+    </p>
+
+    <p>
+        <input
+                type="submit"
+                value="Отправить"
+        >
+    </p>
+
+</form>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            errors: [],
+            name: null,
+            age: null,
+            movie: null
+        },
+        methods: {
+            checkForm: function (e) {
+                if (this.name && this.age) {
+                    return true;
+                }
+
+                this.errors = [];
+
+                if (!this.name) {
+                    this.errors.push('Требуется указать имя.');
+                }
+                if (!this.age) {
+                    this.errors.push('Требуется указать возраст.');
+                }
+
+                e.preventDefault();
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

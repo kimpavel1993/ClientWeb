@@ -57,11 +57,7 @@
 
     function showMaxCitiesCountry(countries) {
         var maxCitiesCount = countries.reduce(function (count, e) {
-            if (count < e.cities.length) {
-                count = e.cities.length;
-            }
-
-            return count;
+            return Math.max(count, e.cities.length)
         }, 0);
 
         maxCitiesCountries = countries.filter(function (e) {
