@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         error.textContent = "";
 
         kelvinTemperature.textContent = "Температура в градусах Кельвина: " + (parseFloat(celsiusTextField.value) + 273.15);
-        fahrenheitTemperature.textContent = "Температура по градусам Фаренгейта: " + (parseFloat(celsiusTextField.value) * 1.8 + 32);
+        fahrenheitTemperature.textContent = "Температура в градусах Фаренгейта: " + (parseFloat(celsiusTextField.value) * 1.8 + 32);
     });
 });
