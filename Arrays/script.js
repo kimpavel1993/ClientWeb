@@ -5,62 +5,57 @@
 
     console.log("Массив:", array1);
 
-    function showDescendingSort(array) {
+    function setDescendingSort(array) {
         array.sort(function (e1, e2) {
             return e2 - e1;
         });
     }
 
-    showDescendingSort(array1);
+    setDescendingSort(array1);
 
     console.log("Массив, отсортированный по убыванию: ", array1);
-    
-    var subarray1 = [];
-    var subarray2 = [];
 
-    function showSubArray(array) {
-        subarray1 = array.slice(0, 5);
-        subarray2 = array.slice(array1.length - 5);
+    function setSubArray1(array) {
+       return array.slice(0, 5);
     }
 
-    showSubArray(array1);
+    console.log("Первые пять элементов массива: ",  setSubArray1(array1));
 
-    console.log("Первые пять элементов массива: ", subarray1);
-    console.log("Последние пять элементов массива: ", subarray2);
-    
-    var evenNumbersSum = 0;
+    function setSubArray2(array) {
+        return array.slice(array1.length - 5);
+    }
 
-    function showEvenNumberSum(array) {
-        evenNumbersSum = array.filter(function (e) {
+    console.log("Последние пять элементов массива: ",  setSubArray2(array1));
+
+    function setEvenNumberSum(array) {
+        return array.filter(function (e) {
             return e % 2 === 0;
         }).reduce(function (e1, e2) {
             return e1 + e2;
         }, 0);
     }
 
-    showEvenNumberSum(array1);
+    console.log("Сумма четных чисел массива: ", setEvenNumberSum(array1));
+    
+    function setArray2() {
+        var array = [];
 
-    console.log("Сумма четных чисел массива: ", evenNumbersSum);
-    
-    var array2 = [];
-    
-    for (var i = 1; i <= 100; i++) {
-        array2.push(i);
+        for (var i = 1; i <= 100; i++) {
+            array.push(i);
+        }
+
+        return array;
     }
 
-    console.log("Массив чисел от 1 до 100: ", array2);
-    
-    var result = [];
+    console.log("Массив чисел от 1 до 100: ", setArray2());
 
-    function showEvenNumbersList(array) {
-        result = array.filter(function (e) {
+    function setEvenNumbersList(array) {
+        return  array.filter(function (e) {
             return e % 2 === 0;
         }).map(function (e) {
             return Math.pow(e, 2);
         });
     }
 
-    showEvenNumbersList(array2);
-
-    console.log("Квадраты четных чисел массива: ", result)
+    console.log("Квадраты четных чисел массива: ", setEvenNumbersList(setArray2()))
 })();
