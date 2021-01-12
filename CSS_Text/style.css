@@ -3,6 +3,7 @@
 }
 
 .main-text-style {
+    max-width: 850px;
     background-color: #FEEED6;
     color: #676565;
     font-family: "Arial", Georgia, sans-serif;
@@ -11,11 +12,10 @@
     line-height: 29px;
     position: relative;
     margin: 0 auto;
-    max-width: 850px;
     overflow: hidden;
 }
 
-.first-text-style h1 {
+.main-text-style h1 {
     position: relative;
     top: 9px;
     left: 15px;
@@ -24,13 +24,13 @@
     font-weight: normal;
 }
 
-.first-text-style p {
+.main-text-style p {
     position: relative;
     left: 12px;
     padding-bottom: 4px;
 }
 
-.first-text-style span {
+.main-text-style span {
     color: #378DB2;
     font-weight: bold;
 }
