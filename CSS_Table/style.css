@@ -5,8 +5,8 @@
 .table-style table {
     border: 1px solid #CCC;
     text-align: left;
-    font-family: "Gill Sans MT", Georgia, sans-serif;
-    font-size: 24px;
+    font-family: "Arial Narrow", Georgia, sans-serif;
+    font-size: 22px;
     margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@
     font-weight: normal;
     white-space: nowrap;
     padding-left: 10px;
-    border: 1px solid #CCC;;
+    border: 1px solid #CCC;
     vertical-align: middle;
     height: 47px;
 }
