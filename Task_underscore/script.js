@@ -75,7 +75,7 @@ console.log(setFilteredPeople(people));
 
 function setFullName(people) {
     return people.map(function (e) {
-        return _.extend(e, { fullName: e.name + " " + e.lastName })
+        return _.extend(e, { fullName: e.name + " " + e.lastName });
     });
 }
 
