@@ -53,35 +53,27 @@
 
     console.log(countries);
 
-    var maxCitiesCountries = [];
-
-    function showMaxCitiesCountry(countries) {
-        var maxCitiesCount = countries.reduce(function (count, e) {
-            return Math.max(count, e.cities.length)
-        }, 0);
-
-        maxCitiesCountries = countries.filter(function (e) {
-            return e.cities.length === maxCitiesCount;
+    function setMaxCitiesCountry(countries) {
+        return countries.filter(function (e) {
+            return e.cities.length === countries.reduce(function (count, e) {
+                return Math.max(count, e.cities.length)
+            }, 0);
         });
     }
 
-    showMaxCitiesCountry(countries);
+    console.log("Страны, с максимальным количеством городов", setMaxCitiesCountry(countries));
 
-    console.log("Страны, с максимальным количеством городов", maxCitiesCountries);
-
-    countries.forEach(function (e) {
+    function setCountriesWithSumPopulation(countries) {
         var result = {};
 
-        function showCountriesWithSumPopulation(countries) {
-            var sumPopulation = countries.cities.reduce(function (sum, e) {
+        countries.forEach(function (e) {
+            result[e.name] = e.cities.reduce(function (sum, e) {
                 return sum + e.population;
             }, 0);
+        });
 
-            result = countries.name + ": " + sumPopulation;
-        }
+        return result;
+    }
 
-        showCountriesWithSumPopulation(e);
-
-        console.log(result)
-    });
+    console.log(setCountriesWithSumPopulation(countries));
 })();
