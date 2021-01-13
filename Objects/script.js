@@ -56,7 +56,7 @@
     function setMaxCitiesCountry(countries) {
         return countries.filter(function (e) {
             return e.cities.length === countries.reduce(function (count, e) {
-                return Math.max(count, e.cities.length)
+                return Math.max(count, e.cities.length);
             }, 0);
         });
     }
