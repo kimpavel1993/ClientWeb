@@ -55,10 +55,10 @@
                 <input v-model="editText" type="text"/>
             </label>
 
+            <span v-bind:class="{'text-danger': hasError, 'text-hide' : isCorrect}">Введите текст</span>
+
             <button @click="saveItem" class="btn btn-success mb-2 mr-2" type="button">Сохранить</button>
             <button @click="cancelEditItem" class="btn btn-danger mb-2 mr-2" type="button">Отменить</button>
-
-            <span v-bind:class="{'text-danger': hasError, 'text-hide' : isCorrect}">Введите текст</span>
         </template>
 
         <template v-else>
