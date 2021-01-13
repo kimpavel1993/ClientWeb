@@ -73,10 +73,10 @@ function setFilteredPeople(people) {
 
 console.log(setFilteredPeople(people));
 
-function setFullName() {
+function setFullName(people) {
     return people.map(function (e) {
         return _.extend(e, { fullName: e.name + " " + e.lastName })
     });
 }
 
-console.log(setFullName());
+console.log(setFullName(people));
