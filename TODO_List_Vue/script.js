@@ -27,6 +27,7 @@ Vue.component("todo-list", {
 
             this.errorMessage = ""
             this.newTodoText = "";
+            
             this.newId++;
         },
 
