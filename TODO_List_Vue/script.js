@@ -15,7 +15,7 @@ Vue.component("todo-list", {
             var text = this.newTodoText;
 
             if (text.trim().length === 0) {
-                this.errorMessage = "Введите текст"
+                this.errorMessage = "Введите текст";
 
                 return;
             }
@@ -25,9 +25,9 @@ Vue.component("todo-list", {
                 text: text
             });
 
-            this.errorMessage = ""
+            this.errorMessage = "";
             this.newTodoText = "";
-            
+
             this.newId++;
         },
 
@@ -38,7 +38,7 @@ Vue.component("todo-list", {
         },
 
         saveItem: function (item, newText) {
-            item.text = newText
+            item.text = newText;
         }
     }
 });
@@ -56,7 +56,7 @@ Vue.component("todo-list-item", {
             isEditing: false,
             editText: "",
             hasError: false,
-            isCorrect: true,
+            isCorrect: true
         };
     },
 
@@ -69,7 +69,7 @@ Vue.component("todo-list-item", {
         },
 
         deleteItem: function () {
-            this.$emit("delete-item", this.item)
+            this.$emit("delete-item", this.item);
         },
 
         saveItem: function () {
@@ -78,7 +78,7 @@ Vue.component("todo-list-item", {
                 this.isCorrect = true;
                 this.isEditing = false;
 
-                this.$emit("save-item", this.item, this.editText)
+                this.$emit("save-item", this.item, this.editText);
             } else {
                 this.hasError = true;
                 this.isCorrect = false;
@@ -94,5 +94,5 @@ Vue.component("todo-list-item", {
 });
 
 new Vue({
-    el: "#app",
+    el: "#app"
 });
