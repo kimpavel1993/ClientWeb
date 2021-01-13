@@ -32,7 +32,7 @@ Vue.component("modal", {
     data: function () {
         return {
             onSaveEdit: null
-        }
+        };
     },
 
     methods: {
@@ -87,7 +87,6 @@ new Vue({
 
         addContact: function () {
             if (this.secondName.trim().length === 0 || this.firstName.trim().length === 0 || this.phone.trim().length === 0) {
-
                 if (this.secondName.trim().length === 0) {
                     this.secondNameErrorMessage = "Заполните поле Фамилия";
                 } else {
