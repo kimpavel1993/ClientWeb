@@ -50,12 +50,12 @@
     console.log("Массив чисел от 1 до 100: ", setArray2());
 
     function setEvenNumbersList(array) {
-        return  array.filter(function (e) {
+        return array.filter(function (e) {
             return e % 2 === 0;
         }).map(function (e) {
             return Math.pow(e, 2);
         });
     }
 
-    console.log("Квадраты четных чисел массива: ", setEvenNumbersList(setArray2()))
+    console.log("Квадраты четных чисел массива: ", setEvenNumbersList(setArray2()));
 })();
