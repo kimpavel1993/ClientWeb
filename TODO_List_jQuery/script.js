@@ -20,7 +20,7 @@ $(document).ready(function () {
             listItem.html("<span class='text'></span><button class='edit-button' type='button'>Редактировать</button><button class='delete-button' type='button'>Удалить</button>");
 
             listItem.find(".edit-button").click(function () {
-                listItem.html("<input class='edit-text' /><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button><span class='edit-error-message'></span>");
+                listItem.html("<input class='edit-text' /><span class='edit-error-message'></span><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button>");
 
                 listItem.find(".edit-text").val(text);
 
