@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.innerHTML = "<span class='text'></span><button class='edit-button' type='button'>Редактировать</button><button class='delete-button' type='button'>Удалить</button>";
 
             listItem.querySelector(".edit-button").addEventListener("click", function () {
-                listItem.innerHTML = "<input class='edit-text' /><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button><span class='edit-error-message'></span>";
+                listItem.innerHTML = "<input class='edit-text' /><span class='edit-error-message'></span><button class='save-button' type='button'>Сохранить</button><button class='cancel-button' type='button'>Отменить</button>";
 
                 listItem.querySelector(".edit-text").value = text;
 
