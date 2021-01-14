@@ -62,19 +62,21 @@ $(document).ready(function () {
         tableItem.find(".first-name").text(firstNameText);
         tableItem.find(".phone").text(phoneNameText);
 
-        tableItem.find(".delete-button").click(function () {
-            tableItem.remove();
-
+        function setIndex() {
             table.find("tr").each(function (i) {
                 $(this).find(".index").text(i);
             });
+        }
+
+        tableItem.find(".delete-button").click(function () {
+            tableItem.remove();
+
+            setIndex();
         });
 
         table.append(tableItem);
 
-        table.find("tr").each(function (i) {
-            $(this).find(".index").text(i);
-        });
+        setIndex();
 
         secondNameTextField.val("");
         firstNameTextField.val("");
