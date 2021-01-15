@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<!--suppress XmlUnboundNsPrefix -->
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,12 +31,11 @@
                 <label>
                     <input v-model="newTodoText" class="form-control mb-2" type="text"/>
                 </label>
-                    <button @click="addNewTodoItem" class="btn btn-success mb-2" type="button">Добавить</button>
+                <button @click="addNewTodoItem" class="btn btn-success mb-2" type="button">Добавить</button>
             </div>
-
         </div>
 
-        <div class="text-danger">{{errorMessage}}</div>
+        <div class="text-danger">{{ errorMessage }}</div>
 
         <ul>
             <todo-list-item class="py-2"
@@ -55,7 +55,7 @@
                 <input v-model="editText" type="text"/>
             </label>
 
-            <span v-bind:class="{'text-danger': hasError, 'text-hide' : isCorrect}">Введите текст</span>
+            <span v-bind:class="{ 'text-danger': hasError, 'text-hide' : isCorrect }">Введите текст</span>
 
             <button @click="saveItem" class="btn btn-success mb-2 mr-2" type="button">Сохранить</button>
             <button @click="cancelEditItem" class="btn btn-danger mb-2 mr-2" type="button">Отменить</button>
