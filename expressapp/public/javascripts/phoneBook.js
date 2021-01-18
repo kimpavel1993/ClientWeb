@@ -59,9 +59,9 @@ new Vue({
         firstName: "",
         phone: "",
         term: "",
-        secondNameErrorMessage: "",
-        firstNameErrorMessage: "",
-        phoneErrorMessage: "",
+        isEmptySecondNameInputField: false,
+        isEmptyFirstNameInputField: false,
+        isEmptyPhoneInputField: false,
         service: new PhoneBookService()
     },
 
@@ -87,30 +87,16 @@ new Vue({
 
         addContact: function () {
             if (this.secondName.trim().length === 0 || this.firstName.trim().length === 0 || this.phone.trim().length === 0) {
-                if (this.secondName.trim().length === 0) {
-                    this.secondNameErrorMessage = "Заполните поле Фамилия";
-                } else {
-                    this.secondNameErrorMessage = "";
-                }
-
-                if (this.firstName.trim().length === 0) {
-                    this.firstNameErrorMessage = "Заполните поле Имя";
-                } else {
-                    this.firstNameErrorMessage = "";
-                }
-
-                if (this.phone.trim().length === 0) {
-                    this.phoneErrorMessage = "Заполните поле Номер телефона";
-                } else {
-                    this.phoneErrorMessage = "";
-                }
+                this.isEmptySecondNameInputField = this.secondName.trim().length === 0;
+                this.isEmptyFirstNameInputField = this.firstName.trim().length === 0;
+                this.isEmptyPhoneInputField = this.phone.trim().length === 0;
 
                 return;
             }
 
-            this.secondNameErrorMessage = "";
-            this.firstNameErrorMessage = "";
-            this.phoneErrorMessage = "";
+            this.isEmptySecondNameInputField = false;
+            this.isEmptyFirstNameInputField = false;
+            this.isEmptyPhoneInputField = false;
 
             var contact = {
                 secondName: this.secondName,

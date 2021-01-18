@@ -11,29 +11,29 @@
           <div class="col-lg-6">
               <div class="form-group">
                   <label>Фамилия</label>
-                  <input type="text" class="form-control" input v-model="secondName">
+                  <input type="text" class="form-control" v-bind:class="{ 'is-invalid': isEmptySecondNameInputField }" v-model="secondName">
+
+                  <div class="invalid-feedback">Введите Фамилию</div>
               </div>
 
               <div class="form-group">
                   <label>Имя</label>
-                  <input type="text" class="form-control" input v-model="firstName">
+                  <input type="text" class="form-control" v-bind:class="{ 'is-invalid': isEmptyFirstNameInputField  }" v-model="firstName">
+
+                  <div class="invalid-feedback text-danger">Введите Имя</div>
               </div>
 
               <div class="form-group">
                   <label>Номер телефона</label>
-                  <input type="text" class="form-control" input v-model="phone">
+                  <input type="text" class="form-control" v-bind:class="{ 'is-invalid': isEmptyPhoneInputField  }" v-model="phone">
+
+                  <div class="invalid-feedback">Введите Номер телефона</div>
               </div>
 
               <button class="btn btn-primary" @click="addContact" type="button">Добавить</button>
           </div>
        </div>
      </form>
-
-     <div class="text-danger">
-        <p>{{ secondNameErrorMessage }}</p>
-        <p>{{ firstNameErrorMessage }}</p>
-        <p>{{ phoneErrorMessage }}</p>
-     </div>
 
     <div class="mb-4 form-inline">
        <div class="row">
@@ -47,7 +47,7 @@
        </div>
     </div>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped table-responsive-sm">
     <thead>
         <tr>
             <th>№</th>
@@ -59,7 +59,7 @@
     </thead>
     <tbody>
         <tr v-for="(contact, index) in contacts" :key="contact.id">
-            <td>{{ index +1 }}.</td>
+            <td>{{ index + 1 }}.</td>
             <td>{{ contact.secondName }}</td>
             <td>{{ contact.firstName }}</td>
             <td>{{ contact.phone }}</td>
