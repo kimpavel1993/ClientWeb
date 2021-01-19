@@ -54,10 +54,12 @@
     console.log(countries);
 
     function getMaxCitiesCountry(countries) {
+        var maxCitiesCountries = countries.reduce(function (count, e) {
+            return Math.max(count, e.cities.length);
+        }, 0);
+
         return countries.filter(function (e) {
-            return e.cities.length === countries.reduce(function (count, e) {
-                return Math.max(count, e.cities.length);
-            }, 0);
+            return e.cities.length === maxCitiesCountries;
         });
     }
 
