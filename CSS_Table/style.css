@@ -12,11 +12,9 @@
 
 .table-style th, .table-style td {
     font-weight: normal;
-    white-space: nowrap;
-    padding-left: 10px;
+    padding: 12px;
     border: 1px solid #CCC;
     vertical-align: middle;
-    height: 47px;
 }
 
 .table-style th {
