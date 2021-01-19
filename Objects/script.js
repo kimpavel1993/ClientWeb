@@ -53,7 +53,7 @@
 
     console.log(countries);
 
-    function setMaxCitiesCountry(countries) {
+    function getMaxCitiesCountry(countries) {
         return countries.filter(function (e) {
             return e.cities.length === countries.reduce(function (count, e) {
                 return Math.max(count, e.cities.length);
@@ -61,19 +61,19 @@
         });
     }
 
-    console.log("Страны с максимальным количеством городов", setMaxCitiesCountry(countries));
+    console.log("Страны с максимальным количеством городов", getMaxCitiesCountry(countries));
 
-    function setCountriesWithSumPopulation(countries) {
+    function getCountriesWithSumPopulation(countries) {
         var result = {};
 
         countries.forEach(function (e) {
             result[e.name] = e.cities.reduce(function (sum, e) {
                 return sum + e.population;
-            }, 0);
+            }, 0)
         });
 
         return result;
     }
 
-    console.log(setCountriesWithSumPopulation(countries));
+    console.log(getCountriesWithSumPopulation(countries));
 })();
