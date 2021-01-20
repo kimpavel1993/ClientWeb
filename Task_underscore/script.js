@@ -76,13 +76,13 @@
 
     console.log(getFilteredPeople(people));
 
-    function setFullName() {
+    function setFullName(people) {
         _.each(people, function (e) {
             return _.extend(e, { fullName: e.name + ' ' + e.lastName });
         });
     }
 
-    setFullName();
+    setFullName(people);
 
     console.log(people);
 })();
