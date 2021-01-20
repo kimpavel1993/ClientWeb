@@ -76,11 +76,13 @@
 
     console.log(getFilteredPeople(people));
 
-    function getFullName() {
-        return people.map(function (e) {
-            return _.extend(e, {fullName: e.name + ' ' + e.lastName});
+    function setFullName() {
+        _.each(people, function (e) {
+            return _.extend(e, { fullName: e.name + ' ' + e.lastName });
         });
     }
 
-    console.log(getFullName());
+    setFullName();
+
+    console.log(people);
 })();
