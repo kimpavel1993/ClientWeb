@@ -17,16 +17,16 @@
 
 .main-text-style h1 {
     position: relative;
-    top: 9px;
-    left: 15px;
-    margin-bottom: 23px;
+    margin-top: 9px;
+    margin-left: 15px;
+    margin-bottom: 14px;
     font-size: 32px;
     font-weight: normal;
 }
 
 .main-text-style p {
     position: relative;
-    left: 12px;
+    padding-left: 12px;
     padding-bottom: 4px;
 }
 
@@ -49,6 +49,6 @@
     font-size: 17px;
     line-height: 24px;
     padding-top: 8px;
-    padding-right: 25px;
+    padding-right: 13px;
     text-align: justify;
 }
