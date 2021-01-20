@@ -71,7 +71,7 @@
         countries.forEach(function (e) {
             result[e.name] = e.cities.reduce(function (sum, e) {
                 return sum + e.population;
-            }, 0)
+            }, 0);
         });
 
         return result;
