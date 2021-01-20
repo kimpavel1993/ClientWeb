@@ -10,13 +10,11 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 29px;
-    position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .main-text-style h1 {
-    position: relative;
     margin-top: 9px;
     margin-left: 15px;
     margin-bottom: 14px;
@@ -25,7 +23,6 @@
 }
 
 .main-text-style p {
-    position: relative;
     padding-left: 12px;
     padding-bottom: 4px;
 }
@@ -36,7 +33,6 @@
 }
 
 .indent {
-    position: relative;
     margin-top: 5px;
     color: #378DB2;
     font-weight: bold;
@@ -44,7 +40,6 @@
 }
 
 .content-text-style {
-    position: relative;
     text-indent: 15px;
     font-size: 17px;
     line-height: 24px;
