@@ -56,7 +56,9 @@
         return _.chain(people)
             .pluck('age')
             .reduce(function (sum, e) {
-                return sum + e / 10;
+                var averageAge = e / people.length
+
+                return sum + averageAge;
             }, 0)
             .value();
     }
@@ -74,11 +76,11 @@
 
     console.log(getFilteredPeople(people));
 
-    function getFullName(people) {
+    function getFullName() {
         return people.map(function (e) {
             return _.extend(e, {fullName: e.name + ' ' + e.lastName});
         });
     }
 
-    console.log(getFullName(people));
+    console.log(getFullName());
 })();
