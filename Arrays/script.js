@@ -5,37 +5,37 @@
 
     console.log("Массив:", array1);
 
-    function sortDescendingArray(array) {
+    function sortArrayByDescending(array) {
         array.sort(function (e1, e2) {
             return e2 - e1;
         });
     }
 
-    sortDescendingArray(array1);
+    sortArrayByDescending(array1);
 
     console.log("Массив, отсортированный по убыванию: ", array1);
 
-    function getSubArray1(array) {
+    function getFirstFiveElementsArray(array) {
        return array.slice(0, 5);
     }
 
-    console.log("Первые пять элементов массива: ", getSubArray1(array1));
+    console.log("Первые пять элементов массива: ", getFirstFiveElementsArray(array1));
 
-    function getSubArray2(array) {
+    function getLastFiveElementsArray(array) {
         return array.slice(array1.length - 5);
     }
 
-    console.log("Последние пять элементов массива: ", getSubArray2(array1));
+    console.log("Последние пять элементов массива: ", getLastFiveElementsArray(array1));
 
-    function getEvenNumberSum(array) {
+    function getEvenNumbersSum(array) {
         return array.filter(function (e) {
             return e % 2 === 0;
-        }).reduce(function (e1, e2) {
-            return e1 + e2;
+        }).reduce(function (sum, e) {
+            return sum + e;
         }, 0);
     }
 
-    console.log("Сумма четных чисел массива: ", getEvenNumberSum(array1));
+    console.log("Сумма четных чисел массива: ", getEvenNumbersSum(array1));
     
     function getArray2() {
         var array = [];
@@ -57,5 +57,5 @@
         });
     }
 
-    console.log("Квадраты четных чисел массива: ", getEvenNumbersList(setArray2()));
+    console.log("Квадраты четных чисел массива: ", getEvenNumbersList(getArray2()));
 })();
